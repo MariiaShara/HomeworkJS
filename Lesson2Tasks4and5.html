@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tasks4and5</title>
+</head>
+<body>
+    <script>
+        'use strict';
+
+        /**
+        * Функция складывает два передаваемых в нее числа
+        * @param {number} a 
+        * @param {number} b
+        * @returns {number} Возвращает сумму чисел a и b.
+        */
+        function add(a, b) {
+            return (a + b);
+        }
+
+
+        /**
+        * Функция вычитает из первого передаваемого в нее числа второе
+        * @param {number} a 
+        * @param {number} b
+        * @returns {number} Возвращает разность чисел a и b.
+        */
+        function subtract(a, b) {
+            return (a - b);
+        }
+
+
+        /**
+        * Функция умножает два передаваемых в нее числа
+        * @param {number} a 
+        * @param {number} b
+        * @returns {number} Возвращает произведение чисел a и b.
+        */
+        function multiply(a, b) {
+            return (a * b);
+        }
+        
+
+        /**
+        * Функция производит деление передаваемых в нее чисел
+        * @param {number} a 
+        * @param {number} b
+        * @returns {number} Возвращает частное от деления чисел a и b.
+        */
+        function divide(a, b) {
+            if(b == 0) {
+                alert("На ноль делить нельзя");
+            }
+            else {
+                return (a / b);
+            }
+        }
+        
+
+        /**
+        * Функция производит основные математические операции над двумя переданными в нее числами
+        * @param {number} arg1 первый аргумент
+        * @param {number} arg2 второй аргумент
+        * @param {string} operation название математической операции
+        * @returns {number} Возвращает результат выполнения математической операции
+        */
+        function mathOperation(arg1, arg2, operation) {
+            let result;
+            switch(operation) {
+
+                case "addition":
+                    result = add(arg1, arg2);
+                    break;
+
+                case "subtraction":
+                    result = subtract(arg1, arg2);
+                    break;
+
+                case "multiplication":
+                    result = multiply(arg1, arg2);
+                    break;
+
+                case "division":
+                    result = divide(arg1, arg2);
+                    break;
+
+                default:
+                    alert("Wrong operation");
+
+            };
+            return result;
+        }
+
+    alert(mathOperation(5,8,"addition"));
+    alert(mathOperation(5,8,"subtraction"));
+    alert(mathOperation(5,8,"multiplication"));
+    alert(mathOperation(5,8,"division"));
+
+    </script>
+</body>
+</html>
